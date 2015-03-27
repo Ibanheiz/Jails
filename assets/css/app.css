@@ -115,4 +115,6 @@ footer.jumbotron{
 
 footer.jumbotron p{
 	font-size:12px;
+	font:bold 14px Arial;
+	line-height: 1em;
 }
