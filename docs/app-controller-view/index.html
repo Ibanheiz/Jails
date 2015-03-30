@@ -59,12 +59,6 @@
                             <li class="toctree-l2"><a href="#init">.init</a></li>
                             
                         
-                            <li class="toctree-l2"><a href="#get">.get</a></li>
-                            
-                        
-                            <li class="toctree-l2"><a href="#watch">.watch</a></li>
-                            
-                        
                             <li class="toctree-l2"><a href="#broadcast">.broadcast</a></li>
                             
                         
@@ -169,19 +163,13 @@ Every methods is executed in the Jails elements context.</p>
 });
 </code></pre>
 
-<h2 id="get">.get</h2>
-<pre><code>.get function( type, name );
-</code></pre>
-<p>Gets a child of your Jails module.</p>
-<p>Type can be : <code>controller</code>, <code>component</code>, <code>view</code>,</p>
-<h2 id="watch">.watch</h2>
-<pre><code>.watch function( element, event, method );
-</code></pre>
-<p>Delegates a event to the container class.</p>
 <h2 id="broadcast">.broadcast</h2>
-<pre><code>.broadcast function( element, event );
+<pre><code>.broadcast function( type:event, options );
 </code></pre>
-<p>Fires an event to all children of the current Jails module.</p>
+<p>Fires an event to all children of the current module.</p>
+<pre><code class="js">    this.broadcast('component:eventname', {some:'options'});
+</code></pre>
+
 <h2 id="emit">.emit</h2>
 <pre><code>.emit function( name, [data] );
 </code></pre>

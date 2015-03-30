@@ -127,8 +127,15 @@ It doesn't have any methods from Jails internal classes.</p>
 
 <p>After defined a filter, you can use it on any mustache template.</p>
 <pre><code class="html">{{#user}}
-    My user name is :{{#uppercase}}{{user}}{{/uppercase}}
+    My user name is :{{#uppercase}}{{name}}{{/uppercase}}
 {{/user}}
+
+</code></pre>
+
+<p>Or, if you're using a regular html template:</p>
+<pre><code class="html">&lt;p&gt;
+    My user name is :&lt;span data-value=&quot;name:uppercase&quot; /&gt;
+&lt;/p&gt;
 
 </code></pre>
 
