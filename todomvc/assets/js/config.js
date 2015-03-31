@@ -1,7 +1,7 @@
 require.config({
 
 	baseUrl :'assets/js/',
-	deps    :['mustache', 'jails', global.page],
+	deps    :[ 'mustache', 'jails', 'libs/zepto', global.page],
 
 	paths   :{
 		jails		:'//rawgit.com/Javiani/Jails/master/source/jails.min',

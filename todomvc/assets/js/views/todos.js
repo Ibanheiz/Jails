@@ -9,9 +9,9 @@ define([
 
 ], function( jails, todos ){
 
-	jails.controller('todos', function(html, data){
+	jails.view('todos', function(html, data){
 
-		var view = this.get('view', 'todos').instance();
+		var view = this;
 
 		this.init = function(){
 
@@ -23,7 +23,12 @@ define([
 			this.listen('newentry:mark-all', action('mark_all'));
 
 			this.listen('footer-todo:clear', action('clear'));
+			this.listen('render', render);
 		};
+
+		function render(e, model){
+			view.render( model );
+		}
 
 		function action( method, prp ){
 

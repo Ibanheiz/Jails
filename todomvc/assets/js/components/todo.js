@@ -52,7 +52,7 @@ define(['jails'], function( jails ){
 
 			var completed = checkbox.prop('checked');
 
-			return {
+			return{
 				id			:id,
 				value		:input_text.val(),
 				completed	:completed,
