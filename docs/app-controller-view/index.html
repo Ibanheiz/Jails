@@ -164,10 +164,10 @@ Every methods is executed in the Jails elements context.</p>
 </code></pre>
 
 <h2 id="broadcast">.broadcast</h2>
-<pre><code>.broadcast function( type:event, options );
+<pre><code>.broadcast function( selector, event, options );
 </code></pre>
 <p>Fires an event to all children of the current module.</p>
-<pre><code class="js">    this.broadcast('component:eventname', {some:'options'});
+<pre><code class="js">    this.broadcast('[data-component]', 'my-event', {some:'options'});
 </code></pre>
 
 <h2 id="emit">.emit</h2>

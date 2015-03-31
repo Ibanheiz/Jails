@@ -31,7 +31,7 @@ define([
 
 			by = by || 'all';
 
-			app.broadcast('view:render', todos.result( by ));
+			app.broadcast('[data-view]', 'render', todos.result( by ));
 			body.className = by;
 		}
 	});
