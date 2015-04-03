@@ -9,14 +9,16 @@ define([
 
 		var filter, by = 'all', model = this;
 
-		persistence( model ).on();
-
 		this.schema = {
 			id			:Number,
 			completed 	:Boolean,
 			checked		:Boolean,
 			value		:String,
 			state		:String
+		};
+
+		this.init = function(){
+			persistence( model ).on();
 		};
 
 		this.clear = function(){

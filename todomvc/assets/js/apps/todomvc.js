@@ -18,15 +18,17 @@ define([
 
 		this.init = function(){
 
+			todos.init();
+			routes();
+		};
+
+		function routes(){
+
 			if( !location.hash ) url.redirect('/');
 
-			r.watch([
-				{ '/:filter':filter },
-				{ '/'		:filter }
-			]);
-
+			r.watch([{ '/:filter':filter }, { '/' :filter }]);
 			r.execute();
-		};
+		}
 
 		function filter( by ){
 
