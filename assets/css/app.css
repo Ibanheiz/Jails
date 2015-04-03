@@ -8,8 +8,9 @@ a:hover{
 	text-decoration:none;
 }
 
-img.code{
-	height:387px;
+.components img{
+	margin:10px;
+	height:300px;
 }
 
 .jumbotron *, footer.jumbotron *:hover{
@@ -105,7 +106,9 @@ img.code{
 }
 
 .github img{ width:32px; }
+.github-footer img{ width:98px ;}
 
+.github-footer{ margin:20px 0 -2px; }
 
 footer.jumbotron{
 	margin:0;
