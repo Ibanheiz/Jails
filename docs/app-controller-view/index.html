@@ -59,6 +59,9 @@
                             <li class="toctree-l2"><a href="#init">.init</a></li>
                             
                         
+                            <li class="toctree-l2"><a href="#x">.x</a></li>
+                            
+                        
                             <li class="toctree-l2"><a href="#broadcast">.broadcast</a></li>
                             
                         
@@ -163,11 +166,26 @@ Every methods is executed in the Jails elements context.</p>
 });
 </code></pre>
 
+<h2 id="x">.x</h2>
+<pre><code>.x function( selector) : Function( String method, arguments... );
+</code></pre>
+<p>This method is called the EXecuter, used when you want to execute some method of other higher class
+such as App, Controller or a View.</p>
+<pre><code class="js">    jails.app('home', function(html, data){
+
+        var view = this.x('[data-view]');
+
+        this.init = function(){
+            view('render', { my_model :true } );
+        };
+    });
+</code></pre>
+
 <h2 id="broadcast">.broadcast</h2>
-<pre><code>.broadcast function( type:event, options );
+<pre><code>.broadcast function( selector, event, options );
 </code></pre>
 <p>Fires an event to all children of the current module.</p>
-<pre><code class="js">    this.broadcast('component:eventname', {some:'options'});
+<pre><code class="js">    this.broadcast('[data-component]', 'my-event', {some:'options'});
 </code></pre>
 
 <h2 id="emit">.emit</h2>
