@@ -32,7 +32,6 @@ define([
 				var todo_action = todos[ method ];
 
 				if( todo_action ){
-					console.log(method);
 					todo_action.call( todos, prp? opt[ prp ] :opt );
 					ctrlr.render( todos.result() );
 				}
