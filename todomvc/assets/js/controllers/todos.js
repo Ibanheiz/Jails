@@ -9,9 +9,9 @@ define([
 
 ], function( jails, todos ){
 
-	jails.view('todos', function(html, data){
+	jails.controller('todos', function(html, data){
 
-		var view = this;
+		var ctrlr = this;
 
 		this.init = function(){
 
@@ -23,12 +23,7 @@ define([
 			this.listen('newentry:mark-all', action('mark_all'));
 
 			this.listen('footer-todo:clear', action('clear'));
-			this.listen('render', render);
 		};
-
-		function render(e, model){
-			view.render( model );
-		}
 
 		function action( method, prp ){
 
@@ -37,8 +32,9 @@ define([
 				var todo_action = todos[ method ];
 
 				if( todo_action ){
+					console.log(method);
 					todo_action.call( todos, prp? opt[ prp ] :opt );
-					view.render( todos.result() );
+					ctrlr.render( todos.result() );
 				}
 			};
 		}

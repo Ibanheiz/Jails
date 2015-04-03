@@ -4,7 +4,7 @@ define([
 	'mods/router/router',
 	'mods/url/url',
 	'models/todos',
-	'views/todos'
+	'controllers/todos'
 
 ], function( jails, router, url, todos){
 
@@ -13,7 +13,8 @@ define([
 		var
 			app = this,
 			r = router.create(),
-			body = html.get(0);
+			body = html.get(0),
+			view = app.x('[data-controller]');
 
 		this.init = function(){
 
@@ -31,7 +32,7 @@ define([
 
 			by = by || 'all';
 
-			app.broadcast('[data-view]', 'render', todos.result( by ));
+			view('render', todos.result( by ));
 			body.className = by;
 		}
 	});
