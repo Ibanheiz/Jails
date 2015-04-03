@@ -4,16 +4,16 @@ define([
 	'mods/router/router',
 	'mods/url/url',
 	'models/todos',
-	'controllers/todos'
+	'views/todos'
 
 ], function( jails, router, url, todos){
 
 	jails.app('todomvc', function(html, data){
 
 		var
+			app = this,
 			r = router.create(),
-			body = html.get(0),
-			view = this.get('view', 'todos').instance();
+			body = html.get(0);
 
 		this.init = function(){
 
@@ -31,7 +31,7 @@ define([
 
 			by = by || 'all';
 
-			view.render( todos.result( by ));
+			app.broadcast('[data-view]', 'render', todos.result( by ));
 			body.className = by;
 		}
 	});
