@@ -1,0 +1,108 @@
+/*
+	@Fonts & Colors
+*/
+
+.x-logo{
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.x-code{
+	font-family: 'Monaco', 'Source Sans Pro', sans-serif;
+	font-size:12px;
+}
+
+.x-header{
+	color:#fff;
+	border:1px solid #dee0df;
+	border-top:5px solid #2f9bc1;
+	background-color:#33363c
+}
+
+.x-logo{
+	font-weight:normal;
+}
+
+.x-logo span{
+	color:#2f9bc1;
+	font-weight:bold
+}
+
+.x-sidebar ul{
+	color:#525252;
+	font-size:18px;
+}
+
+.x-sidebar ul a{
+	position:relative;
+
+	color:#2f9bc1;
+	font-size:14px;
+
+	text-decoration:none;
+	background-color:transparent;
+}
+
+.x-sidebar ul a.active:before{
+	position:absolute;
+	left:-30px;
+	top:-6px;
+	font-size:25px;
+	content:'☛';
+	color:#000;
+
+}
+
+.x-content{
+	border-left:1px solid rgba(0, 0, 0, 0.1);
+}
+
+.x-footer{
+	font-size:12px;
+	background-color:#33363c;
+	color:#fff;
+}
+
+.x-footer a{
+	color:#37beed
+}
+
+/**
+	@Structure
+*/
+
+.x-header{
+	padding:5px 45px;
+}
+
+.x-sidebar{
+	width:200px;
+	margin:0 0 0 80px;
+	padding-top:20px;
+	float:left;
+}
+
+.x-content{
+	overflow:hidden;
+	padding:40px 40px 200px;
+	min-height:400px;
+	max-width:960px
+}
+
+.x-sidebar ul{
+	list-style:none;
+	padding:0;
+	margin:25px 0 25px;
+}
+
+.x-sidebar li p{
+	margin:10px 0 10px;
+}
+
+.x-footer{
+	text-align:center;
+	padding:10px;
+}
+
+iframe{
+	background:#000 url(//444.hu/assets/loading-animated.gif) no-repeat center center
+}
