@@ -1,5 +1,8 @@
 # Gulp Jails
 
+
+## Scaffolds
+
 There are some gulp jails tasks which will help you to create:
 
 - config
@@ -17,7 +20,7 @@ Every Jails project needs a `config.js` file, you can create it with **gulp jail
 
     gulp jails/config -n global.page
 
-## apps, controllers, components and filters
+## Apps, Controllers, Components and Filters
 
 For these classes the command is pretty much the same, you must define what you want to create and point to a name using the `-n` parameter.
 
