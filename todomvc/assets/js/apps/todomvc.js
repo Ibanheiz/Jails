@@ -14,7 +14,7 @@ define([
 			app = this,
 			r = router.create(),
 			body = html.get(0),
-			view = app.x('[data-controller]');
+			view = app.x('[data-component=view]');
 
 		this.init = function(){
 

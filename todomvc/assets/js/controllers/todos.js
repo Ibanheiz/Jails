@@ -5,15 +5,18 @@ define([
 
 	'components/newentry',
 	'components/todo',
-	'components/footer-todo'
+	'components/footer-todo',
+	'components/view'
 
 ], function( jails, todos ){
 
 	jails.controller('todos', function(html, data){
 
-		var ctrlr = this;
+		var ctrlr = this, view;
 
 		this.init = function(){
+
+			view = this.x('[data-component=view]');
 
 			this.listen('todo:edited', action('up'));
 			this.listen('todo:complete', action('up'));
@@ -33,7 +36,7 @@ define([
 
 				if( todo_action ){
 					todo_action.call( todos, prp? opt[ prp ] :opt );
-					ctrlr.render( todos.result() );
+					view('render', todos.result());
 				}
 			};
 		}

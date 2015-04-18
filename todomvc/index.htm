@@ -16,48 +16,50 @@
 
 <body data-app="todomvc" class="all">
 
-	<section id="todoapp" data-controller="todos" data-template>
+	<section id="todoapp" data-controller="todos">
 
-		<header id="header" data-component="newentry">
-			<h1>todos</h1>
-			<input id="new-todo" placeholder="What needs to be done?" autofocus />
-		</header>
+		<div data-component="view">
 
-		<section id="main" data-if="has_todos">
+			<header id="header" data-component="newentry">
+				<h1>todos</h1>
+				<input id="new-todo" placeholder="What needs to be done?" autofocus />
+			</header>
 
-			<input id="toggle-all" type="checkbox" data-attr="{{toggle_all}}" />
-			<label for="toggle-all">Mark all as complete</label>
+			<section id="main" data-if="has_todos">
 
-			<ul id="todo-list" data-each="todos">
+				<input id="toggle-all" type="checkbox" data-attr="{{toggle_all}}" />
+				<label for="toggle-all">Mark all as complete</label>
 
-				<li data-component="todo" data-id="{{id}}" class="{{state}}">
-					<div class="view">
-						<input class="toggle" type="checkbox" data-attr="{{checked}}" />
-						<label data-value="value" />
-						<button class="destroy" />
-					</div>
-					<input class="edit" value="{{value}}" />
-				</li>
-			</ul>
-		</section>
+				<ul id="todo-list" data-each="todos">
 
-		<footer id="footer" data-component="footer-todo" data-if="has_todos">
+					<li data-component="todo" data-id="{{id}}" class="{{state}}">
+						<div class="view">
+							<input class="toggle" type="checkbox" data-attr="{{checked}}" />
+							<label data-value="value" />
+							<button class="destroy" />
+						</div>
+						<input class="edit" value="{{value}}" />
+					</li>
+				</ul>
+			</section>
 
-			<span id="todo-count">
-				<strong data-value="count">0</strong>
-				<span data-out="{{count}} != 1? 'items':'item'">items</span> left
-			</span>
+			<footer id="footer" data-component="footer-todo" data-if="has_todos">
+				<span id="todo-count">
+					<strong data-value="count">0</strong>
+					<span data-out="{{count}} != 1? 'items':'item'">items</span> left
+				</span>
 
-			<ul id="filters">
-				<li><a href="#/">All</a></li>
-				<li><a href="#/active">Active</a></li>
-				<li><a href="#/completed">Completed</a></li>
-			</ul>
+				<ul id="filters">
+					<li><a href="#/">All</a></li>
+					<li><a href="#/active">Active</a></li>
+					<li><a href="#/completed">Completed</a></li>
+				</ul>
 
-			<button data-if="all_completed" id="clear-completed">
-				Clear completed (<span data-value="all_completed">0</span>)
-			</button>
-		</footer>
+				<button data-if="all_completed" id="clear-completed">
+					Clear completed (<span data-value="all_completed">0</span>)
+				</button>
+			</footer>
+		</div>
 
 	</section>
 

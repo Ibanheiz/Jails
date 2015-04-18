@@ -17,8 +17,10 @@ define(['jails'], function( jails ){
 
 			var v = $.trim( this.value );
 
-			if(e.keyCode == 13 && v)
+			if(e.keyCode == 13 && v){
 				cp.emit('create', v);
+			}
+
 		}
 
 		function toggle_all(){
