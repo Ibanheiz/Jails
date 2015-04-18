@@ -8,8 +8,7 @@
 You'll need to follow framework folder structure in order to make jails work and make a sense.
 You may take a look on:
 
-- [Sample example](https://github.com/Javiani/Jails/tree/master/sample)
-- [Todo MVC example](https://github.com/Javiani/Jails/tree/master/todomvc)
+- [Todo MVC example](//jails-org.github.io/Jails/todomvc/)
 
 ## Gulp way ( Better )
 

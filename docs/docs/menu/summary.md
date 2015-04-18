@@ -1,5 +1,6 @@
-- [ ✪ Getting Started](#/getting-started "Getting Started")
 - [ ✪ Architecture](#/index "Index")
+- [ ✪ Getting Started](#/getting-started "Getting Started")
+- [ ✪ Gulp Jails](#/gulp-jails "Gulp Jails")
 
 ---
 
