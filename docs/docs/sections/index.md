@@ -20,10 +20,8 @@ Using the same philosophy, Jails tries to help developers to create a robust and
 
 ## Apps & Controllers
 
-Those 2 classes inherits from the same main class, and they have the same methods. Controller is a particular case. It can be extended with some view methods and strategies to deal with templates.
-
-The idea is to handle the relationship of components using a Controller and the relationship of
-controllers using the app. Apps and Controllers shares a **data** variable which is readable and writable for these classes.
+Those 2 classes inherits from the same main class, and they have the same methods. The idea is to handle the relationship of **Components** using a Controller and the relationship of
+**Controllers** using the app. Apps and Controllers shares a **data** variable which is readable and writable and can be used to persist some data.
 
 ## The Apps
 App is a main controller, it wraps all the components, views, controllers and is used to start a property of `data` variable, or any other global action.
