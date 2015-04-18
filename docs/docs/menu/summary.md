@@ -13,7 +13,8 @@
 ---
 
 - 📼 JailsCasts
-- [Components](#/video-components "App")
+- [Components](#/video-components "ScreenCast Components")
+- [Controllers & Apps](#/video-ctrls-apps "ScreenCast Controllers & Apps")
 
 ---
 
