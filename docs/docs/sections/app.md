@@ -15,7 +15,7 @@ The markup should specify the type of Jails module and it's name aswell.
 
 ```html
 <body data-app="my-app" />
-<div data-controller="my-controller" data-template />
+<div data-controller="my-controller" />
 <div data-component="my-component" />
 ```
 

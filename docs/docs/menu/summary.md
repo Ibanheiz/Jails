@@ -4,8 +4,7 @@
 ---
 
 - 📕 Api's
-- [Apps](#/app "App")
-- [Controllers](#/controller "Controller")
+- [Apps & Controllers](#/app "App")
 - [Components](#/component "Component")
 - [Models](#/model "Model")
 - [Filters](#/filter "Filter")
