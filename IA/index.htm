@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-BR">
+	<head>
+		<title>IA - Grid</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="icon" href="assets/images/favicon.png">
+
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" />
+		<link rel="stylesheet" href="assets/css/app.css" type="text/css" />
+
+		<script type="text/javascript">
+			document.documentElement.className = 'js';
+			var global = { page :'apps/home' };
+		</script>
+		<script type="text/javascript" data-main="assets/js/config" src="assets/js/libs/requirejs.js" defer async></script>
+	</head>
+
+	<body data-app="home">
+
+		<header class="jumbotron">
+			<div class="container">
+				<div class="col-md-4">
+					<h1>Tabela - IA</h1>
+				</div>
+			</div>
+		</header>
+
+		<section class="container">
+
+			<div class="options">
+
+				<!--@button({ action:'fill' })-->
+				<button class="btn-primary btn" data-component="button">Completar <br />com zero</button>
+
+				<!--@button({ action:'generate' })-->
+				<button class="btn-success btn" data-component="button">Gerar Saída</button>
+
+				<div class="form-group">
+					<label>Código gerado</label>
+					<textarea class="form-control" rows="10"></textarea>
+				</div>
+
+				<!--@button({ action:'clear' })-->
+				<button class="btn-danger btn" data-component="button">Limpar tabela</button>
+
+			</div>
+
+			<!--@table({ lines:20, collumns:28, size :30, template:'#table' })-->
+			<div data-component="table" class="grid"></div>
+
+		</section>
+
+		<script id="tr" type="x-tmpl-mustache">
+			{{#lines}}
+				<tr>
+					{{#collumns}} {{>td}} {{/collumns}}
+				</tr>
+			{{/lines}}
+		</script>
+
+		<script id="td" type="x-tmpl-mustache">
+			<td>
+				<input
+					type="number" maxlength="1" min="0" max="1"
+					style="width:{{size}}px; height:{{size}}px" />
+			</td>
+		</script>
+
+		<script id="table" type="x-tmpl-mustache">
+			<table class="table table-bordered" >
+				{{>tr}}
+			</table>
+		</script>
+
+
+	</body>
+</html>
