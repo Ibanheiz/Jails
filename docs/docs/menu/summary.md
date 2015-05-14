@@ -7,7 +7,6 @@
 - 📕 Api's
 - [Apps & Controllers](#/app "App")
 - [Components](#/component "Component")
-- [Models](#/model "Model")
 - [Filters](#/filter "Filter")
 
 ---

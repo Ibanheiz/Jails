@@ -1,8 +1,7 @@
 define([
 
 	'jails',
-	'mustache',
-	'components/button'
+	'mustache'
 
 ], function( jails, mustache ){
 

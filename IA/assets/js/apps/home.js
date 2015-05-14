@@ -1,7 +1,8 @@
 define([
 
 	'jails',
-	'components/table'
+	'components/table',
+	'components/button'
 
 ], function( jails ){
 
