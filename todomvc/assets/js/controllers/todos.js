@@ -6,7 +6,7 @@ define([
 	'components/newentry',
 	'components/todo',
 	'components/footer-todo',
-	'components/view'
+	'comps/view/view'
 
 ], function( jails, todos ){
 

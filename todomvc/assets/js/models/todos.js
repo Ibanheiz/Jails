@@ -1,13 +1,14 @@
 define([
 
 	'jails',
+	'mods/model/model',
 	'mods/persistence/persistence'
 
-], function( jails, persistence ){
+], function( jails, model, persistence ){
 
-	return jails.model('todos', function(){
+	return model('todos', function(){
 
-		var filter, by = 'all', model = this;
+		var filter, by = 'all', m = this;
 
 		this.schema = {
 			id			:Number,
@@ -18,11 +19,11 @@ define([
 		};
 
 		this.init = function(){
-			persistence( model ).on();
+			persistence( m ).on();
 		};
 
 		this.clear = function(){
-			model.data( filter.active(), 'id' );
+			m.data( filter.active(), 'id' );
 		};
 
 		this.up = function(cp_todo){
@@ -50,7 +51,7 @@ define([
 				todo.state	   	= mark? 'completed':'';
 				todo.checked	= mark? 'checked' :'';
 
-				model.update( todo.id, todo );
+				m.update( todo.id, todo );
 			});
 		};
 
@@ -95,7 +96,7 @@ define([
 			},
 
 			all	:function(){
-				return $.map( model.data(), function(item){ return [item]; });
+				return $.map( m.data(), function(item){ return [item]; });
 			}
 		};
 	});

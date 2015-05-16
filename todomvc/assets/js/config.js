@@ -1,4 +1,4 @@
-	require.config({
+require.config({
 
 	baseUrl :'assets/js/',
 	deps    :[ 'mustache', 'jails', 'libs/zepto', global.page],
@@ -6,14 +6,12 @@
 	paths   :{
 		jails		:'//rawgit.com/Javiani/Jails/master/source/jails.min',
 		mods		:'//rawgit.com/jails-org/Modules/master',
+		comps		:'//rawgit.com/jails-org/Components/master',
 		mustache  	:'//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min'
 	},
 
 	callback :function( mustache, jails ){
 
-		jails.start({
-			base        :Zepto,
-			templates   :{ engine :mustache }
-		});
+		jails.start({ base  :Zepto });
 	}
 });
