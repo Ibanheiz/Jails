@@ -65,7 +65,7 @@ jails.component('my-component', function(html){
 Your higher class such as `apps` or `controllers` should listen to your component event.
 
 ```js
-jails.view('my-view', function(html, data){
+jails.controller('my-controller', function(html, data){
 
     this.init = function(){
         this.listen('my-component:shout', log);
