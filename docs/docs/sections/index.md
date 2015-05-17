@@ -8,11 +8,10 @@ Using the same philosophy, Jails tries to help developers to create a robust and
 
 ## The workflow
 
- Jails splits applications into 5 abstractions:
+ Jails splits applications into 4 abstractions:
 
 - `App`
 - `Component`
-- `Model`
 - `Controlller`
 - `Modules`
 
@@ -38,9 +37,6 @@ It's not possible to use view methods like controller does, app is just a mediat
 Component exists in their own world, it doesn't have any relationship with other modules in the page.
 Like a validation component for instance, or a datepicker, even a styled selectbox can be treated as a component.
 
-## Model
-
-Model is not related to any of these classes, it should work on it's own shell, so, `model` is a regular AMD module.
 
 ## Modules
 
