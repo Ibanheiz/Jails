@@ -14,17 +14,12 @@ You may take a look on:
 
 If you want to "compile" your code you can use **gulp-jails** to take advantage of scaffolding and building tasks.
 
-- Point to **gulp-jails** in your **package.json**.
+- Install it, `npm install gulp-jails`
+- Install local gulp, `npm install gulp`
+- Create and execute **gulp-jails** on your `gulpfile.js`
+
 
 ```js
-"devDependencies": {
-    "gulp-jails" :"git://github.com/jails-org/Gulp"
-}
-```
-
-- Install it, `npm install`
-- Execute **gulp-jails** from your `gulpfile.js`
-
-```js
+// gulpfile.js
 require('gulp-jails')();
 ```
